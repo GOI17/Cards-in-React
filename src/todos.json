@@ -1,0 +1,24 @@
+{
+    "todos": [
+        {
+            "title": "Clean my sword",
+            "responsable": "John",
+            "priority": "low"
+        },
+        {
+            "title": "Learn about cersei",
+            "responsable": "Daynerys",
+            "priority": "high"
+        },
+        {
+            "title": "Learn how to reign kingslanding",
+            "responsable": "Sansa",
+            "priority": "low"
+        },
+        {
+            "title": "See the past",
+            "responsable": "Bran",
+            "priority": "medium"
+        }
+    ]
+}

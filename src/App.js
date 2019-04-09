@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Navigation from "./components/navigation";
+import TodoList from "./components/todo-list";
+
 import './App.css';
 
+import { todos } from './todos.json'
+
 class App extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      todos: todos.length
+    }
+  }
+
+  handleUpdateTodo(length) {
+    if (length < this.state.todos)
+      this.setState({
+        todos: this.state.todos++
+      })
+    else
+      this.setState({
+        todos: this.state.todos--
+      })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Navigation title="Tasks" todos={this.state.todos} />
+        <TodoList></TodoList>
       </div>
-    );
+    )
   }
 }
 
